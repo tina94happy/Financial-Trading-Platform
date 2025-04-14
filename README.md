@@ -1,4 +1,4 @@
-For front-end visualize module:
+##For front-end visualize module:
   admin is for administrator page
   admins is about the back-end administrator's module
   difangmeishi is about market category page module
@@ -19,7 +19,7 @@ For front-end visualize module:
 
 
 
-How to run this program:
+##How to run this program##:
   First you need to import database files locally and open the database
   Second you need to change the configuration in the application.properties, make it fit your database setting
   Third you reload the maven repository in order to download related dependency(If you haven't configured your own maven local repository, You may need to do it first and set the path of maven on your coding tool.
@@ -29,10 +29,10 @@ How to run this program:
     Run command: "npm run serve" to boost front-end
 
 
-Make sure you have java environment, tomcat web server(usually it along with the IDEL coding platform), Mysql, and Maven environment. 
+##Make sure you have java environment, tomcat web server(usually it along with the IDEL coding platform), Mysql, and Maven environment. 
 
 
-Now this program can handle customer order, show the news, show non-real-time stock, handle user-to-administrator communication and have ability to count users' browsing data and purchasing data.
+##Now this program can handle customer order, show the news, show non-real-time stock, handle user-to-administrator communication and have ability to count users' browsing data and purchasing data.
 
 
 We can try to add other functionality like data analysis, import real-time data
