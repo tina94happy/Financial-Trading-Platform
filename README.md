@@ -17,6 +17,8 @@ For front-end visualize module:
   yuding is about user's order management module
   zhifu is about purchase's method module
 
+
+
 How to run this program:
   First you need to import database files locally and open the database
   Second you need to change the configuration in the application.properties, make it fit your database setting
@@ -26,8 +28,13 @@ How to run this program:
     Run command: "npm install serve" to download required dependency
     Run command: "npm run serve" to boost front-end
 
+
 Make sure you have java environment, tomcat web server(usually it along with the IDEL coding platform), Mysql, and Maven environment. 
+
+
 Now this program can handle customer order, show the news, show non-real-time stock, handle user-to-administrator communication and have ability to count users' browsing data and purchasing data.
+
+
 We can try to add other functionality like data analysis, import real-time data
   
   
