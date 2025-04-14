@@ -6,63 +6,63 @@
 
                         <div class="detail detail-text">
                 <div class="detail-title">
-                    景点编号：
+                    Recommended Stock Number：
                 </div>
                 <div class="detail-content">
                     {{ map.jingdianbianhao }}
                 </div>
             </div>                        <div class="detail detail-longtext">
                 <div class="detail-title">
-                    景点名称：
+                    Recommended Stock Name：
                 </div>
                 <div class="detail-content">
                     {{ map.jingdianmingcheng }}
                 </div>
             </div><div class="detail detail-longtext">
                 <div class="detail-title">
-                    开放时间：
+                  Real-time：
                 </div>
                 <div class="detail-content">
                     {{ map.kaifangshijian }}
                 </div>
             </div><div class="detail detail-longtext">
                 <div class="detail-title">
-                    地址：
+                  Related Company：
                 </div>
                 <div class="detail-content">
                     {{ map.dizhi }}
                 </div>
             </div>                        <div class="detail detail-select">
                 <div class="detail-title">
-                    所属地区：
+                  Financial Product Category：
                 </div>
                 <div class="detail-content">
                      <e-select-view module="diqu" :value="map.suoshudiqu" select="id" show="diqumingcheng"></e-select-view>
                 </div>
             </div>                                                <div class="detail detail-selectmul">
                 <div class="detail-title">
-                    附近美食：
+                  Related Market Category：
                 </div>
                 <div class="detail-content">
                     {{  map.fujinmeishi  }}
                 </div>
             </div>                        <div class="detail detail-money">
                 <div class="detail-title">
-                    票价：
+                  Real-time Price：
                 </div>
                 <div class="detail-content">
                     {{ map.piaojia }}
                 </div>
             </div>                        <div class="detail detail-number">
                 <div class="detail-title">
-                    浏览量：
+                    page views：
                 </div>
                 <div class="detail-content">
                     {{ map.liulanliang }}
                 </div>
             </div>                                                <div class="detail detail-autotime">
                 <div class="detail-title">
-                    添加时间：
+                    Add Time：
                 </div>
                 <div class="detail-content">
                     {{ map.addtime }}
@@ -70,14 +70,14 @@
             </div>            
                         <div class="detail detail-images">
                 <div class="detail-title">
-                    图片：
+                    Image：
                 </div>
                 <div class="detail-content">
                     <e-images :src="map.tupian" type="detail"></e-images>
                 </div>
             </div>                                    <div class="detail detail-editor">
                 <div class="detail-title">
-                    描述：
+                    Description：
                 </div>
                 <div class="detail-content">
                     <div v-html="map.miaoshu"></div>
@@ -86,10 +86,10 @@
         </div>
         <div class="mt10">
             <el-button type="default" class="hidePrint" @click="$router.go(-1)">
-                返回
+                Back
             </el-button>
             <el-button type="success" class="hidePrint" @click="$print">
-                打印本页
+                Print this page
             </el-button>
         </div>
     </div>

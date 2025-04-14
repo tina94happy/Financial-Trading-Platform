@@ -1,5 +1,5 @@
 <template>
-    <el-tooltip class="item" effect="dark" :content="isCollect ? '已收藏':'收藏'" placement="top-start">
+    <el-tooltip class="item" effect="dark" :content="isCollect ? 'Already Favorite':'Favorite'" placement="top-start">
         <el-button v-if="isCollect" icon="el-icon-star-on" type="danger" circle></el-button>
         <el-button @click="collect" v-else icon="el-icon-star-off" type="warning" circle></el-button>
     </el-tooltip>

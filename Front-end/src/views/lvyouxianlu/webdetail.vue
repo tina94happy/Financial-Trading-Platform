@@ -3,7 +3,7 @@
         <div>
 <e-container>
             <div  style="margin:10px 0 0 0;background-color:#FFFFFF">
-<e-module-model-box title="线路详情">
+<e-module-model-box title="Financial Product Detail">
     
 <div class="">
     <div class="goods-info clearfix">
@@ -15,42 +15,42 @@
             <div class="descount">
                                     <div>
                         <span class="name">
-                            出发地：
+                            Start Time：
                         </span>
                         <span class="val">
                             {{ map.chufadi }}                        </span>
                     </div>
                                     <div>
                         <span class="name">
-                            途经地：
+                            Estimated Profit：
                         </span>
                         <span class="val">
                             {{ map.tujingdi }}                        </span>
                     </div>
                                     <div>
                         <span class="name">
-                            终点：
+                            End Time：
                         </span>
                         <span class="val">
                             {{ map.zhongdian }}                        </span>
                     </div>
                                     <div>
                         <span class="name">
-                            价格：
+                            Real-time Price：
                         </span>
                         <span class="val">
                             {{ map.jiage }}                        </span>
                     </div>
                                     <div>
                         <span class="name">
-                            浏览量：
+                            Page Views：
                         </span>
                         <span class="val">
                             {{ map.liulanliang }}                        </span>
                     </div>
                             </div>
 
-                            <el-button type="primary" @click="$router.push('/yudingadd?id='+map.id)">预定</el-button>
+                            <el-button type="primary" @click="$router.push('/yudingadd?id='+map.id)">Purchase</el-button>
             
                             <e-collect v-model="isCollect"
                            module="lvyouxianlu"
@@ -76,14 +76,14 @@
 
 <e-container>
     <el-tabs type="border-card">
-                <el-tab-pane label="线路特色">
+                <el-tab-pane label="Advantages">
             <div  style="margin:15px 0 15px 0;background-color:#FFFFFF">
 
 <div style="text-indent: 2em">
 <div v-html="map.xianlutese"></div></div>
 
 </div>        </el-tab-pane>
-                <el-tab-pane label="线路简介">
+                <el-tab-pane label="Description">
             <div  style="margin:15px 0 15px 0;background-color:#FFFFFF">
 
 <div style="text-indent: 2em">

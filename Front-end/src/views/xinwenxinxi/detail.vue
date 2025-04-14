@@ -1,47 +1,47 @@
 <template>
     
     <div class="xinwenxinxi-detail" v-loading="loading" ref="print">
-        <el-page-header @back="goBack" content="详情页面"></el-page-header>
+        <el-page-header @back="goBack" content="Detail Page"></el-page-header>
         <div class="admin-detail">
 
                         <div class="detail detail-longtext">
                 <div class="detail-title">
-                    标题：
+                    Title：
                 </div>
                 <div class="detail-content">
                     {{ map.biaoti }}
                 </div>
             </div>                        <div class="detail detail-select">
                 <div class="detail-title">
-                    分类：
+                    Category：
                 </div>
                 <div class="detail-content">
                      <e-select-view module="xinwenfenlei" :value="map.fenlei" select="id" show="fenleimingcheng"></e-select-view>
                 </div>
             </div>                        <div class="detail detail-image">
                 <div class="detail-title">
-                    图片：
+                    Image：
                 </div>
                 <div class="detail-content">
                     <e-img :src="map.tupian" style="max-width:120px" />
                 </div>
             </div>                        <div class="detail detail-textuser">
                 <div class="detail-title">
-                    添加人：
+                    Add People：
                 </div>
                 <div class="detail-content">
                     {{ map.tianjiaren }}
                 </div>
             </div>                        <div class="detail detail-number">
                 <div class="detail-title">
-                    点击率：
+                    Page Views：
                 </div>
                 <div class="detail-content">
                     {{ map.dianjilv }}
                 </div>
             </div>                                                <div class="detail detail-autotime">
                 <div class="detail-title">
-                    添加时间：
+                    Add Time：
                 </div>
                 <div class="detail-content">
                     {{ map.addtime }}
@@ -49,7 +49,7 @@
             </div>            
                                                             <div class="detail detail-editor">
                 <div class="detail-title">
-                    内容：
+                    Content：
                 </div>
                 <div class="detail-content">
                     <div v-html="map.neirong"></div>
@@ -58,10 +58,10 @@
         </div>
         <div class="mt10">
             <el-button type="default" class="hidePrint" @click="$router.go(-1)">
-                返回
+                Back
             </el-button>
             <el-button type="success" class="hidePrint" @click="$print">
-                打印本页
+                Print this page
             </el-button>
         </div>
     </div>

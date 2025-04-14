@@ -2,22 +2,22 @@
     <div class="liuyanban-add" v-loading="loading">
         <el-card class="box-card">
             <div slot="header" class="clearfix">
-                                <span class="title"> 添加留言板</span>
+                                <span class="title"> Add Message Board</span>
                             </div>
             <div class="form-database-form">
                 
 
             <el-form :model="form" ref="formModel" label-width="130px" status-icon validate-on-rule-change>
-                                <el-form-item label="姓名" prop="xingming" required :rules="[{required:true, message:'请填写姓名'}]">
-                                            <el-input placeholder="输入姓名" style="width:250px;" v-model="form.xingming" />                                    </el-form-item>
+                                <el-form-item label="Name" prop="xingming" required :rules="[{required:true, message:'Please enter name'}]">
+                                            <el-input placeholder="Please enter name" style="width:250px;" v-model="form.xingming" />                                    </el-form-item>
 
-                                <el-form-item label="联系电话" prop="lianxidianhua" required :rules="[{required:true, message:'请填写联系电话'}]">
-                                            <el-input placeholder="输入联系电话" style="width:250px;" v-model="form.lianxidianhua" />                                    </el-form-item>
+                                <el-form-item label="Phone Number" prop="lianxidianhua" required :rules="[{required:true, message:'Please enter phone number'}]">
+                                            <el-input placeholder="Please enter phone number" style="width:250px;" v-model="form.lianxidianhua" />                                    </el-form-item>
 
-                                <el-form-item label="留言内容" prop="liuyanneirong" required :rules="[{required:true, message:'请填写留言内容'}]">
+                                <el-form-item label="Message Content" prop="liuyanneirong" required :rules="[{required:true, message:'Please enter message content'}]">
                                             <el-input type="textarea" v-model="form.liuyanneirong"></el-input>                                    </el-form-item>
 
-                                <el-form-item label="留言人" prop="liuyanren">
+                                <el-form-item label="Message Writer" prop="liuyanren">
                                             <el-input v-model="form.liuyanren" readonly style="width: 250px;"></el-input>                                    </el-form-item>
 
                                 <el-form-item v-if="btnText">
@@ -66,7 +66,7 @@ liuyanren:this.$store.state.user.session.username,
             },
             btnText:{
                 type:String,
-                default:'提交'
+                default:'Submit'
             },
                     },
 
@@ -81,7 +81,7 @@ liuyanren:this.$store.state.user.session.username,
                     this.$post(api.liuyanban.insert , form).then(res=>{
                         this.loading = false;
                         if(res.code == api.code.OK){
-                            this.$message.success('添加成功');
+                            this.$message.success('Add successfully');
                             this.$emit('success' , res.data);
                             this.$refs.formModel.resetFields();
                                                         this.loadInfo();

@@ -15,7 +15,7 @@
         <div>
             <e-container>
                 <div style="margin:10px 0 0 0">
-                    <e-module-model-box title="人气景点">
+                    <e-module-model-box title="Popular Recommended Stock">
                         <el-row :gutter="30">
                             <el-col v-for="r in jingdianxinxilist1" :md="6" :key="r.id" style="margin-bottom: 20px">
                                 <e-module-products
@@ -40,7 +40,7 @@
         <div>
             <e-container>
                 <div style="margin:10px 0 0 0">
-                    <e-module-model-box title="地方美食">
+                    <e-module-model-box title="Market">
                         <el-row :gutter="30">
                             <el-col v-for="r in difangmeishilist2" :md="6" :key="r.id" style="margin-bottom: 20px">
                                 <e-module-products
@@ -65,7 +65,7 @@
         <div>
             <e-container>
                 <div style="margin:10px 0 0 0">
-                    <e-module-model-box title="旅游线路">
+                    <e-module-model-box title="Popular Financial Product">
 
 
                         <el-row :gutter="20">
@@ -93,7 +93,7 @@
         <div>
             <e-container>
                 <div style="margin:10px 0 0 0">
-                    <e-module-model-box title="旅游资讯">
+                    <e-module-model-box title="News">
 
 
                         <div class="">
@@ -105,10 +105,10 @@
                                          :image="r.tupian"
 
                             >
-                                <span>分类: <e-select-view module="xinwenfenlei" :value="r.fenlei" select="id"
+                                <span>Category: <e-select-view module="xinwenfenlei" :value="r.fenlei" select="id"
                                                          show="fenleimingcheng"></e-select-view></span>
-                                <span>添加人:{{ r.tianjiaren }}</span>
-                                <span>点击率:{{ r.dianjilv }}</span>
+                                <span>Add People:{{ r.tianjiaren }}</span>
+                                <span>Page Views:{{ r.dianjilv }}</span>
 
                             </e-news-list>
                         </div>

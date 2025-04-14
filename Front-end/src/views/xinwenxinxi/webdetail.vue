@@ -3,19 +3,19 @@
         <div>
 <e-container>
             <div  style="margin:10px 0 0 0">
-<e-module-model-box title="新闻详情">
+<e-module-model-box title="News Detail">
     
 <div class="news-info">
     <h3 class="title" v-text="map.biaoti"></h3>
     <div class="descount">
                 <span class="title">
-            分类：
+            Category：
              <e-select-view module="xinwenfenlei" :value="map.fenlei" select="id" show="fenleimingcheng"></e-select-view>        </span>
                 <span class="title">
-            点击率：
+            Page Views：
             {{ map.dianjilv }}        </span>
                 <span class="title">
-            添加人：
+            Add People：
             {{ map.tianjiaren }}        </span>
             </div>
     <div class="content" v-html="map.neirong">

@@ -5,7 +5,7 @@
         <el-card class="box-card">
             <div slot="header" class="clearfix">
                 <span class="title">
-                留言板列表
+                Message Board List
                 </span>
 
             </div>
@@ -16,47 +16,47 @@
 
                 <el-table-column type="index" label="#"></el-table-column> <!-- 序号 -->
 
-                <el-table-column label="姓名" width="130">
+                <el-table-column label="Name" width="130">
                     <template slot-scope="{row}">
                         {{ row.xingming }}
                     </template>
                 </el-table-column>
-                <el-table-column label="联系电话" width="130">
+                <el-table-column label="Phone Number" width="130">
                     <template slot-scope="{row}">
                         {{ row.lianxidianhua }}
                     </template>
                 </el-table-column>
-                <el-table-column label="留言内容">
+                <el-table-column label="Message content">
                     <template slot-scope="{row}">
                         {{ row.liuyanneirong }}
                     </template>
                 </el-table-column>
-                <el-table-column label="留言人" width="80">
+                <el-table-column label="Message Writer" width="80">
                     <template slot-scope="{row}">
                         {{ row.liuyanren }}
                     </template>
                 </el-table-column>
-                <el-table-column label="回复内容">
+                <el-table-column label="Reply Content">
                     <template slot-scope="{row}">
                         {{ row.huifuneirong }}
                     </template>
                 </el-table-column>
 
 
-                <el-table-column label="操作">
+                <el-table-column label="Operation">
                     <template slot-scope="{row}">
                         <el-button-group>
-                            <el-tooltip content="回复" placement="top">
+                            <el-tooltip content="Reply" placement="top">
                                 <el-button icon="el-icon-edit"
                                            @click="$goto({path:'/admin/liuyanbanupdt',query:{id:row.id } })"
                                            type="warning" size="mini"></el-button>
                             </el-tooltip>
-                            <el-tooltip content="详情" placement="top">
+                            <el-tooltip content="Detail" placement="top">
                                 <el-button @click="$goto({path:'/admin/liuyanbandetail',query:{id:row.id } })"
                                            icon="el-icon-info" type="info" size="mini"></el-button>
                             </el-tooltip>
 
-                            <el-tooltip content="删除" placement="top">
+                            <el-tooltip content="Delete" placement="top">
                                 <el-button icon="el-icon-delete" type="danger" size="mini" @click="deleteItem(row)">
 
                                 </el-button>
@@ -150,7 +150,7 @@
             },
             // 删除某行方法
             deleteItem(row) {
-                this.$confirm('确定删除数据？', '提示', { // 弹出 确认框提示是否要删除
+                this.$confirm('Do you want to delete this data？', 'Hint', { // 弹出 确认框提示是否要删除
                     type: 'warning'
                 }).then(() => {// 确定操作
 

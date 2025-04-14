@@ -3,7 +3,7 @@
         <div>
 <e-container>
             <div  style="margin:10px 0 0 0;background-color:#FFFFFF">
-<e-module-model-box title="旅游线路">
+<e-module-model-box title="Financial Product">
     <div class="snick clearfix">
                 <div style="margin-bottom: 20px">
             <form action="javascript:;" @submit="searchSubmit" class="form-search">
@@ -11,36 +11,36 @@
         <tbody>
                     <tr>
                 <td class="label">
-                    出发地                </td>
+                    Start Time                </td>
                 <td>
                                             <el-input
                                 type="text" style="width: 150px"
                                 v-model="search.chufadi"
-                                placeholder="请输入关键词">
+                                placeholder="Please enter key words">
 
                         </el-input>
                                     </td>
             </tr>
                     <tr>
                 <td class="label">
-                    途经地                </td>
+                    Advantages                </td>
                 <td>
                                             <el-input
                                 type="text" style="width: 150px"
                                 v-model="search.tujingdi"
-                                placeholder="请输入关键词">
+                                placeholder="Please enter key words">
 
                         </el-input>
                                     </td>
             </tr>
                     <tr>
                 <td class="label">
-                    终点                </td>
+                    End Time                </td>
                 <td>
                                             <el-input
                                 type="text" style="width: 150px"
                                 v-model="search.zhongdian"
-                                placeholder="请输入关键词">
+                                placeholder="Please enter key words">
 
                         </el-input>
                                     </td>
@@ -48,7 +48,7 @@
                     <tr>
                 <td></td>
                 <td>
-                    <el-button type="success" @click="searchSubmit">搜索</el-button>
+                    <el-button type="success" @click="searchSubmit">Search</el-button>
                 </td>
             </tr>
         </tbody>

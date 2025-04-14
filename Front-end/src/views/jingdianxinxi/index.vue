@@ -3,19 +3,19 @@
         <div>
 <e-container>
             <div  style="margin:10px 0 0 0">
-<e-module-model-box title="景点列表">
+<e-module-model-box title="Recommended Stock List">
     
 <form action="javascript:;" @submit="searchSubmit" class="form-search">
     <table class="jd-search">
         <tbody>
                     <tr>
                 <td class="label">
-                    所属地区                </td>
+                  Financial Product Category                </td>
                 <td>
                                             <p class="search-radio">
 
                             <a href="javascript:;" @click="selectRadio('suoshudiqu','')"
-                               :class="{active:!search.suoshudiqu}">全部</a>
+                               :class="{active:!search.suoshudiqu}">All</a>
 
                                                                                         <a href="javascript:;"
                                    v-for="r in mapdiqu4"
@@ -28,12 +28,12 @@
             </tr>
                     <tr>
                 <td class="label">
-                    景点名称                </td>
+                  Recommended Stock Name                </td>
                 <td>
                                             <el-input
                                 type="text" style="width: 150px"
                                 v-model="search.jingdianmingcheng"
-                                placeholder="请输入关键词">
+                                placeholder="Please enter keywords">
 
                         </el-input>
                                     </td>
@@ -41,7 +41,7 @@
                     <tr>
                 <td></td>
                 <td>
-                    <el-button type="success" @click="searchSubmit">搜索</el-button>
+                    <el-button type="success" @click="searchSubmit">Search</el-button>
                 </td>
             </tr>
         </tbody>

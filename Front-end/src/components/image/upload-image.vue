@@ -1,5 +1,5 @@
 <template>
-    <div v-loading="loading" element-loading-text="上传中" class="avatar-uploader">
+    <div v-loading="loading" element-loading-text="uploading" class="avatar-uploader">
         <el-upload
                 action="https://127.0.0.1"
                 drag
@@ -8,7 +8,7 @@
             <e-img v-if="value" :src="value" class="avatar"/>
             <i v-else class="el-icon-plus avatar-uploader-icon"></i>
         </el-upload>
-        <div contentEditable="true" ref="divimg" @keydown="hookKey" @keyup="hookKey" @paste.prevent.stop="Paste">点我按Ctrl+V粘贴</div>
+        <div contentEditable="true" ref="divimg" @keydown="hookKey" @keyup="hookKey" @paste.prevent.stop="Paste">Press me and use Ctrl+v Paste</div>
     </div>
 </template>
 <style type="text/scss" lang="scss">

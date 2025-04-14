@@ -1,23 +1,23 @@
 <template>
     
-                <div class="v-list" v-loading="loading" element-loading-text="加载中">
+                <div class="v-list" v-loading="loading" element-loading-text="Loading">
 
         <el-card class="box-card">
             <div slot="header" class="clearfix">
                 <span class="title">
-                美食分类列表
+                Market Category List
                 </span>
 
             </div>
                 <!-- 搜索 -->
         <div class="form-search">
             <el-form @submit.prevent.stop :inline="true" size="mini">
-                                <el-form-item label="分类名称">
+                                <el-form-item label="Category Name">
                 
                     <el-input v-model="search.fenleimingcheng"></el-input>
                     
                 </el-form-item>                <el-form-item>
-                    <el-button type="primary" @click="searchSubmit" icon="el-icon-search">查询</el-button>
+                    <el-button type="primary" @click="searchSubmit" icon="el-icon-search">Search</el-button>
                 </el-form-item>
                             </el-form>
         </div>
@@ -28,7 +28,7 @@
             
             <el-table-column type="index" label="#"></el-table-column> <!-- 序号 -->
 
-                        <el-table-column label="分类名称">
+                        <el-table-column label="Category Name">
                 <template slot-scope="{row}">
                     {{  row.fenleimingcheng  }}                </template>
             </el-table-column>
@@ -36,15 +36,15 @@
 
 
                         
-            <el-table-column label="操作">
+            <el-table-column label="Operation">
                 <template slot-scope="{row}">
                     <el-button-group>
                     
-                                            <el-tooltip content="编辑" placement="top">
+                                            <el-tooltip content="Edit" placement="top">
                     <el-button icon="el-icon-edit" @click="$goto({path:'/admin/meishifenleiupdt',query:{id:row.id } })"
                                type="warning" size="mini"></el-button>
                         </el-tooltip>
-                        <el-tooltip content="删除" placement="top">
+                        <el-tooltip content="Delete" placement="top">
                     <el-button icon="el-icon-delete" type="danger" size="mini" @click="deleteItem(row)">
 
                     </el-button>
@@ -144,7 +144,7 @@
             },
             // 删除某行方法
             deleteItem( row ){
-                this.$confirm('确定删除数据？' , '提示',{ // 弹出 确认框提示是否要删除
+                this.$confirm('Do you want to delete this data？' , 'Hint',{ // 弹出 确认框提示是否要删除
                     type: 'warning'
                 }).then(()=>{// 确定操作
 

@@ -3,7 +3,7 @@
         <div>
 <e-container>
             <div  style="margin:10px 0 0 0">
-<e-module-model-box title="景点详情">
+<e-module-model-box title="Recommended Stock Detail">
     
 <div class="">
     <div class="goods-info clearfix">
@@ -15,42 +15,42 @@
             <div class="descount">
                                     <div>
                         <span class="name">
-                            所属地区：
+                            Financial Product Category：
                         </span>
                         <span class="val">
                              <e-select-view module="diqu" :value="map.suoshudiqu" select="id" show="diqumingcheng"></e-select-view>                        </span>
                     </div>
                                     <div>
                         <span class="name">
-                            地址：
+                            Related Company：
                         </span>
                         <span class="val">
                             {{ map.dizhi }}                        </span>
                     </div>
                                     <div>
                         <span class="name">
-                            开放时间：
+                            Real-time：
                         </span>
                         <span class="val">
                             {{ map.kaifangshijian }}                        </span>
                     </div>
                                     <div>
                         <span class="name">
-                            附近美食：
+                            Related Market Category：
                         </span>
                         <span class="val">
                             {{  map.fujinmeishi  }}                        </span>
                     </div>
                                     <div>
                         <span class="name">
-                            票价：
+                            Real-time Price：
                         </span>
                         <span class="val">
                             {{ map.piaojia }}                        </span>
                     </div>
                                     <div>
                         <span class="name">
-                            浏览量：
+                            Page Views：
                         </span>
                         <span class="val">
                             {{ map.liulanliang }}                        </span>

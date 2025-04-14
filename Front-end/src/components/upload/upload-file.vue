@@ -2,13 +2,13 @@
     <el-upload
             v-loading="loading"
             class="upload-file"
-            element-loading-text="上传中"
+            element-loading-text="Uploading"
             drag
             action="https://127.0.0.1"
             :before-upload="beforeUpload"
             :multiple="multiple" :show-file-list="false">
         <i class="el-icon-upload"></i>
-        <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+        <div class="el-upload__text">Please drag the file here to upload，or<em>Click to upload</em></div>
         <div class="el-upload__text success" v-if="value!=''"><i class="el-icon-success"></i>已上传</div>
     </el-upload>
 </template>

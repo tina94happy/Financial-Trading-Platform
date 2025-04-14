@@ -3,20 +3,20 @@
         <div style="margin:20px 0 0 0">
             <e-container>
                 <div style="margin:10px 0 0 0">
-                    <e-module-model-box title="新闻信息">
+                    <e-module-model-box title="News Content">
 
                         <form action="javascript:;" @submit="searchSubmit" class="form-search">
                             <table class="jd-search">
                                 <tbody>
                                 <tr>
                                     <td class="label">
-                                        分类
+                                        Category
                                     </td>
                                     <td>
                                         <p class="search-radio">
 
                                             <a href="javascript:;" @click="selectRadio('fenlei','')"
-                                               :class="{active:!search.fenlei}">全部</a>
+                                               :class="{active:!search.fenlei}">All</a>
 
                                             <a href="javascript:;"
                                                v-for="r in mapxinwenfenlei3"
@@ -30,13 +30,13 @@
                                 </tr>
                                 <tr>
                                     <td class="label">
-                                        标题
+                                        Title
                                     </td>
                                     <td>
                                         <el-input
                                                 type="text" style="width: 150px"
                                                 v-model="search.biaoti"
-                                                placeholder="请输入关键词">
+                                                placeholder="Please enter keywords">
 
                                         </el-input>
                                     </td>
@@ -44,7 +44,7 @@
                                 <tr>
                                     <td></td>
                                     <td>
-                                        <el-button type="success" @click="searchSubmit">搜索</el-button>
+                                        <el-button type="success" @click="searchSubmit">Search</el-button>
                                     </td>
                                 </tr>
                                 </tbody>

@@ -4,7 +4,7 @@
                    filterable
                    allow-create
                    default-first-option
-                   placeholder="请设置"></el-select>
+                   placeholder="Setting"></el-select>
     </div>
 </template>
 <style type="text/scss" lang="scss">

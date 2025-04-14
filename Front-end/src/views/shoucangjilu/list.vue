@@ -4,32 +4,32 @@
 
         <el-card class="box-card">
             <div slot="header" class="clearfix">
-                收藏记录
+                My Favorite
             </div>
             <!-- 搜索 -->
 
             <el-table border :data="list" style="width: 100%" highlight-current-row>
 
-                <el-table-column label="名称">
+                <el-table-column label="Name">
                     <template slot-scope="{row}">
                         {{ row.biaoti }}
                     </template>
                 </el-table-column>
-                <el-table-column label="收藏日期" width="140">
+                <el-table-column label="Collection Date" width="140">
                     <template slot-scope="{row}">
                         {{ row.addtime }}
                     </template>
                 </el-table-column>
-                <el-table-column label="操作">
+                <el-table-column label="Operation">
                     <template slot-scope="{row}">
                         <el-button-group>
 
-                            <el-tooltip content="详情" placement="top">
+                            <el-tooltip content="Detail" placement="top">
                                 <el-button @click="$goto({path:'/'+row.biao+'detail',query:{id:row.xwid } })"
                                            icon="el-icon-info" type="info" size="mini"></el-button>
                             </el-tooltip>
 
-                            <el-tooltip content="删除" placement="top">
+                            <el-tooltip content="Delete" placement="top">
                                 <el-button icon="el-icon-delete" type="danger" size="mini" @click="deleteItem(row)">
                                 </el-button>
                             </el-tooltip>
@@ -112,7 +112,7 @@
             },
             // 删除某行方法
             deleteItem(row) {
-                this.$confirm('确定删除数据？', '提示', { // 弹出 确认框提示是否要删除
+                this.$confirm('Do you want to delete this favorite？', 'Hint', { // 弹出 确认框提示是否要删除
                     type: 'warning'
                 }).then(() => {// 确定操作
 

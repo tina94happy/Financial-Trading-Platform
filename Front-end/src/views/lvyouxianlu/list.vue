@@ -5,40 +5,40 @@
         <el-card class="box-card">
             <div slot="header" class="clearfix">
                 <span class="title">
-                旅游线路列表
+                Financial Product List
                 </span>
 
             </div>
             <!-- 搜索 -->
             <div class="form-search">
                 <el-form @submit.prevent.stop :inline="true" size="mini">
-                    <el-form-item label="线路编号">
+                    <el-form-item label="Financial Product Number">
 
                         <el-input v-model="search.xianlubianhao"></el-input>
 
                     </el-form-item>
-                    <el-form-item label="线路名称">
+                    <el-form-item label="Financial Product Name">
 
                         <el-input v-model="search.xianlumingcheng"></el-input>
 
                     </el-form-item>
-                    <el-form-item label="出发地">
+                    <el-form-item label="Start Time">
 
                         <el-input v-model="search.chufadi"></el-input>
 
                     </el-form-item>
-                    <el-form-item label="途经地">
+                    <el-form-item label="Advantages">
 
                         <el-input v-model="search.tujingdi"></el-input>
 
                     </el-form-item>
-                    <el-form-item label="终点">
+                    <el-form-item label="End Time">
 
                         <el-input v-model="search.zhongdian"></el-input>
 
                     </el-form-item>
                     <el-form-item>
-                        <el-button type="primary" @click="searchSubmit" icon="el-icon-search">查询</el-button>
+                        <el-button type="primary" @click="searchSubmit" icon="el-icon-search">Search</el-button>
                     </el-form-item>
                 </el-form>
             </div>
@@ -49,62 +49,62 @@
 
                 <el-table-column type="index" label="#"></el-table-column> <!-- 序号 -->
 
-                <el-table-column label="线路编号" width="130">
+                <el-table-column label="Financial Product Number" width="130">
                     <template slot-scope="{row}">
                         {{ row.xianlubianhao }}
                     </template>
                 </el-table-column>
-                <el-table-column label="线路名称">
+                <el-table-column label="Financial Product Name">
                     <template slot-scope="{row}">
                         {{ row.xianlumingcheng }}
                     </template>
                 </el-table-column>
-                <el-table-column label="图片" width="100">
+                <el-table-column label="Image" width="100">
                     <template slot-scope="{row}">
                         <e-img :src="row.tupian" type="list" style="max-width:120px"></e-img>
                     </template>
                 </el-table-column>
-                <el-table-column label="出发地">
+                <el-table-column label="Start Time">
                     <template slot-scope="{row}">
                         {{ row.chufadi }}
                     </template>
                 </el-table-column>
-                <el-table-column label="途经地">
+                <el-table-column label="Advantages">
                     <template slot-scope="{row}">
                         {{ row.tujingdi }}
                     </template>
                 </el-table-column>
-                <el-table-column label="终点">
+                <el-table-column label="End Time">
                     <template slot-scope="{row}">
                         {{ row.zhongdian }}
                     </template>
                 </el-table-column>
-                <el-table-column label="价格" width="80">
+                <el-table-column label="Real-time price" width="80">
                     <template slot-scope="{row}">
                         {{ row.jiage }}
                     </template>
                 </el-table-column>
-                <el-table-column label="浏览量" width="80">
+                <el-table-column label="Page Views" width="80">
                     <template slot-scope="{row}">
                         {{ row.liulanliang }}
                     </template>
                 </el-table-column>
 
 
-                <el-table-column label="操作">
+                <el-table-column label="Operation">
                     <template slot-scope="{row}">
                         <el-button-group>
 
-                            <el-tooltip content="详情" placement="top">
+                            <el-tooltip content="Detail" placement="top">
                                 <el-button @click="$goto({path:'/admin/lvyouxianludetail',query:{id:row.id } })"
                                            icon="el-icon-info" type="info" size="mini"></el-button>
                             </el-tooltip>
-                            <el-tooltip content="编辑" placement="top">
+                            <el-tooltip content="Edit" placement="top">
                                 <el-button icon="el-icon-edit"
                                            @click="$goto({path:'/admin/lvyouxianluupdt',query:{id:row.id } })"
                                            type="warning" size="mini"></el-button>
                             </el-tooltip>
-                            <el-tooltip content="删除" placement="top">
+                            <el-tooltip content="Delete" placement="top">
                                 <el-button icon="el-icon-delete" type="danger" size="mini" @click="deleteItem(row)">
 
                                 </el-button>
@@ -210,7 +210,7 @@
             },
             // 删除某行方法
             deleteItem(row) {
-                this.$confirm('确定删除数据？', '提示', { // 弹出 确认框提示是否要删除
+                this.$confirm('Do you want to delete this data？', 'Hint', { // 弹出 确认框提示是否要删除
                     type: 'warning'
                 }).then(() => {// 确定操作
 

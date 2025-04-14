@@ -51,7 +51,7 @@ export default {
         },
         btnText:{
             type:String,
-            default:'+ 查看详情'
+            default:'+ Detail'
         },
         isScale:{
             type:Boolean,

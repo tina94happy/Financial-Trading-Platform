@@ -3,12 +3,12 @@
         <div class="select-update">
             <div>
                 <el-select @change="$emit('input' , $event)" :value="value" filterable>
-                    <el-option :value="0" label="请选择"></el-option>
+                    <el-option :value="0" label="Please select"></el-option>
                     <el-option :value="v.id" :label="getLabel(v)" v-for="v in list" :key="v.id"></el-option>
                 </el-select>
             </div>
             <div>
-                关键词：
+                Key words：
                 <el-input style="width: 150px" v-model="searchMsg.keyword" />
             </div>
             <div>
@@ -18,7 +18,7 @@
             </div>-->
             <div class="search-btn">
                 <el-button icon="el-icon-search" @click="searchTable(true)">
-                    搜索
+                    Search
                 </el-button>
             </div>
         </div>

@@ -2,7 +2,7 @@
     <div class="v-module-products">
         <article>
             <div class="pro-btn pro-btn-add" @click="$gotoUrl">
-                查看
+                View
             </div>
             <div :class="showType">
                 <div class="image" @click="$gotoUrl">

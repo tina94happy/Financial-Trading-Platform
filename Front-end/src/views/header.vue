@@ -2,7 +2,7 @@
     <div class="header-box" :class="{open:status}">
         <e-container>
             <div class="header-top clearfix">
-                <div class="left">关于web开发</div>
+                <div class="left">Financial Trading Platform</div>
                 <div class="right">
                     <template v-if="$session.username">
                         <el-dropdown>
@@ -10,14 +10,14 @@
                                 {{  $session.username  }} <i class="el-icon-arrow-down el-icon--right"></i>
                               </span>
                             <el-dropdown-menu slot="dropdown">
-                                <el-dropdown-item icon="el-icon-user" @click.native="$router.push('/admin')">个人中心</el-dropdown-item>
-                                <el-dropdown-item icon="el-icon-arrow-left" @click.native="logout">退出登录</el-dropdown-item>
+                                <el-dropdown-item icon="el-icon-user" @click.native="$router.push('/admin')">Personal Center</el-dropdown-item>
+                                <el-dropdown-item icon="el-icon-arrow-left" @click.native="logout">Log out</el-dropdown-item>
                             </el-dropdown-menu>
                         </el-dropdown>
                     </template>
                     <template v-else>
                         <el-button type="primary" @click="$router.push('/login')" size="mini">
-                            登录
+                            Log in
                         </el-button>
                     </template>
                 </div>
@@ -35,11 +35,11 @@
                 <div class="header-nav-ul nav-left clearfix">
                     <ul class="header-nav-left clearfix">
                         <li>
-<router-link to="/">首页
+<router-link to="/"> Home Page
 </router-link>
 </li>
 <li>
-<router-link to="/xinwenxinxi">旅游新闻
+<router-link to="/xinwenxinxi">News
 <i class="el-icon-arrow-down"></i>
 </router-link>
 <ul class="submenu">
@@ -49,7 +49,7 @@
 </ul>
 </li>
 <li>
-<router-link to="/jingdianxinxi">景区信息
+<router-link to="/jingdianxinxi">Recommended Stock
 <i class="el-icon-arrow-down"></i>
 </router-link>
 <ul class="submenu">
@@ -59,19 +59,19 @@
 </ul>
 </li>
 <li>
-<router-link to="/difangmeishi">美食信息
+<router-link to="/difangmeishi">Market
 </router-link>
 </li>
 <li>
-<router-link to="/lvyouxianlu">旅游线路
+<router-link to="/lvyouxianlu">Financial Product
 </router-link>
 </li>
 <li>
-<router-link to="/liuyanbanadd">在线留言
+<router-link to="/liuyanbanadd">Online Message
 </router-link>
 </li>
 <li>
-<router-link to="/yonghuadd">注册
+<router-link to="/yonghuadd">Register
 </router-link>
 </li>
                     </ul>
@@ -278,7 +278,7 @@
                 });
             },
             logout(){
-                this.$confirm('确定退出登录？','确认信息').then(()=>{
+                this.$confirm('Do you wanna Log out？','Confirm').then(()=>{
                     // 退出登录
                     this.$store.dispatch('user/logout');
                 });

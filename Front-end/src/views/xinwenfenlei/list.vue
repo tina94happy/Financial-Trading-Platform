@@ -5,7 +5,7 @@
         <el-card class="box-card">
             <div slot="header" class="clearfix">
                 <span class="title">
-                新闻分类列表
+                News Category List
                 </span>
 
             </div>
@@ -16,7 +16,7 @@
             
             <el-table-column type="index" label="#"></el-table-column> <!-- 序号 -->
 
-                        <el-table-column label="分类名称"width="130">
+                        <el-table-column label="Category Name"width="130">
                 <template slot-scope="{row}">
                     {{  row.fenleimingcheng  }}                </template>
             </el-table-column>
@@ -24,15 +24,15 @@
 
 
                         
-            <el-table-column label="操作">
+            <el-table-column label="Operation">
                 <template slot-scope="{row}">
                     <el-button-group>
                     
-                                            <el-tooltip content="编辑" placement="top">
+                                            <el-tooltip content="Edit" placement="top">
                     <el-button icon="el-icon-edit" @click="$goto({path:'/admin/xinwenfenleiupdt',query:{id:row.id } })"
                                type="warning" size="mini"></el-button>
                         </el-tooltip>
-                        <el-tooltip content="删除" placement="top">
+                        <el-tooltip content="Delete" placement="top">
                     <el-button icon="el-icon-delete" type="danger" size="mini" @click="deleteItem(row)">
 
                     </el-button>
@@ -130,7 +130,7 @@
             },
             // 删除某行方法
             deleteItem( row ){
-                this.$confirm('确定删除数据？' , '提示',{ // 弹出 确认框提示是否要删除
+                this.$confirm('Do you want to delete this category？' , 'Hint',{ // 弹出 确认框提示是否要删除
                     type: 'warning'
                 }).then(()=>{// 确定操作
 

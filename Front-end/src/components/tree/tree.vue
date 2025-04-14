@@ -2,7 +2,7 @@
     <div class="e-tree">
         <tree-select
                 :options="list"
-                placeholder="请选择分类..."
+                placeholder="Please select category..."
                 :value="value"
                 @input="$emit('input' , $event)"
         />

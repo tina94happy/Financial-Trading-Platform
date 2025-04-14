@@ -1,14 +1,14 @@
 <template>
 <div class="footer mt10">
             <div class="copyrightnr link">
-            友情链接&nbsp;
+            Friendly Link&nbsp;
             <a v-for="v in likeList" :href="v.wangzhi" target="_blank">{{  v.wangzhanmingcheng  }}</a> &nbsp;
         </div>
     
     <div class="copyrightnr">
-        地址：华南理工大学　　电话：0000-00000000　　手机：12312312312
+        Location：Washington University in Saint Louis　　Phone Number：xxx-xxx-xxxx
             <br />
-            版权所有：软工潘 　　ICP备********号    </div>
+            @sirpinaple1. All Rights Reserved   </div>
 </div>
 </template>
 

@@ -2,15 +2,15 @@
     <div class="xinwenfenlei-add" v-loading="loading">
         <el-card class="box-card">
             <div slot="header" class="clearfix updt">
-                                    <el-page-header @back="$router.go(-1)" content="编辑新闻分类">
+                                    <el-page-header @back="$router.go(-1)" content="Edit News Category">
                     </el-page-header>
                             </div>
             <div class="form-database-form">
                 
 
             <el-form :model="form" ref="formModel" label-width="130px" status-icon validate-on-rule-change>
-                                <el-form-item label="分类名称" prop="fenleimingcheng" required :rules="[{required:true, message:'请填写分类名称'}, {validator:rule.checkRemote, message:'内容重复了', checktype:'update', module:'xinwenfenlei', col:'fenleimingcheng', id:'{{   form.id   }}', trigger:'blur'}]">
-                                            <el-input placeholder="输入分类名称" style="width:250px;" v-model="form.fenleimingcheng" />                                    </el-form-item>
+                                <el-form-item label="Category Name" prop="fenleimingcheng" required :rules="[{required:true, message:'Please enter Category Name'}, {validator:rule.checkRemote, message:'内容重复了', checktype:'update', module:'xinwenfenlei', col:'fenleimingcheng', id:'{{   form.id   }}', trigger:'blur'}]">
+                                            <el-input placeholder="Please enter Category Name" style="width:250px;" v-model="form.fenleimingcheng" />                                    </el-form-item>
 
                                 <el-form-item v-if="btnText">
                     <el-button type="primary" @click="submit">{{ btnText }}</el-button>
@@ -61,7 +61,7 @@
             },
             btnText:{
                 type:String,
-                default:'提交'
+                default:'Submit'
             },
                         id: {
                 type: [String, Number],
@@ -80,7 +80,7 @@
                     this.$post(api.xinwenfenlei.update , form).then(res=>{
                         this.loading = false;
                         if(res.code == api.code.OK){
-                            this.$message.success('添加成功');
+                            this.$message.success('Add successfully');
                             this.$emit('success' , res.data);
                             this.$refs.formModel.resetFields();
                                                         this.loadInfo();

@@ -2,14 +2,14 @@
     <div class="liuyanban-add" v-loading="loading">
         <el-card class="box-card">
             <div slot="header" class="clearfix updt">
-                                    <el-page-header @back="$router.go(-1)" content="编辑留言板">
+                                    <el-page-header @back="$router.go(-1)" content="Edit Message Board">
                     </el-page-header>
                             </div>
             <div class="form-database-form">
                 
 
             <el-form :model="form" ref="formModel" label-width="130px" status-icon validate-on-rule-change>
-                                <el-form-item label="回复内容" prop="huifuneirong" required :rules="[{required:true, message:'请填写回复内容'}]">
+                                <el-form-item label="Reply Content" prop="huifuneirong" required :rules="[{required:true, message:'Please enter reply content'}]">
                                             <el-input type="textarea" v-model="form.huifuneirong"></el-input>                                    </el-form-item>
 
                                 <el-form-item v-if="btnText">
@@ -61,7 +61,7 @@
             },
             btnText:{
                 type:String,
-                default:'提交'
+                default:'Submit'
             },
                         id: {
                 type: [String, Number],

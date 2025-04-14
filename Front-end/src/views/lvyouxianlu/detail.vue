@@ -1,61 +1,61 @@
 <template>
     
     <div class="lvyouxianlu-detail" v-loading="loading" ref="print">
-        <el-page-header @back="goBack" content="详情页面"></el-page-header>
+        <el-page-header @back="goBack" content="Detail Page"></el-page-header>
         <div class="admin-detail">
 
                         <div class="detail detail-text">
                 <div class="detail-title">
-                    线路编号：
+                  Financial Product Number：
                 </div>
                 <div class="detail-content">
                     {{ map.xianlubianhao }}
                 </div>
             </div>                        <div class="detail detail-longtext">
                 <div class="detail-title">
-                    线路名称：
+                  Financial Product Name：
                 </div>
                 <div class="detail-content">
                     {{ map.xianlumingcheng }}
                 </div>
             </div><div class="detail detail-longtext">
                 <div class="detail-title">
-                    出发地：
+                  Start time：
                 </div>
                 <div class="detail-content">
                     {{ map.chufadi }}
                 </div>
             </div><div class="detail detail-longtext">
                 <div class="detail-title">
-                    途经地：
+                  Estimated Profit：
                 </div>
                 <div class="detail-content">
                     {{ map.tujingdi }}
                 </div>
             </div><div class="detail detail-longtext">
                 <div class="detail-title">
-                    终点：
+                  End Time：
                 </div>
                 <div class="detail-content">
                     {{ map.zhongdian }}
                 </div>
             </div>                                                <div class="detail detail-money">
                 <div class="detail-title">
-                    价格：
+                  Real-time Price：
                 </div>
                 <div class="detail-content">
                     {{ map.jiage }}
                 </div>
             </div>                        <div class="detail detail-number">
                 <div class="detail-title">
-                    浏览量：
+                    Page Views：
                 </div>
                 <div class="detail-content">
                     {{ map.liulanliang }}
                 </div>
             </div>                                                <div class="detail detail-autotime">
                 <div class="detail-title">
-                    添加时间：
+                    Add Time：
                 </div>
                 <div class="detail-content">
                     {{ map.addtime }}
@@ -63,21 +63,21 @@
             </div>            
                         <div class="detail detail-images">
                 <div class="detail-title">
-                    图片：
+                    Image：
                 </div>
                 <div class="detail-content">
                     <e-images :src="map.tupian" type="detail"></e-images>
                 </div>
             </div>                                    <div class="detail detail-editor">
                 <div class="detail-title">
-                    线路特色：
+                    Advantages：
                 </div>
                 <div class="detail-content">
                     <div v-html="map.xianlutese"></div>
                 </div>
             </div><div class="detail detail-editor">
                 <div class="detail-title">
-                    线路简介：
+                    Description：
                 </div>
                 <div class="detail-content">
                     <div v-html="map.xianlujianjie"></div>
@@ -86,10 +86,10 @@
         </div>
         <div class="mt10">
             <el-button type="default" class="hidePrint" @click="$router.go(-1)">
-                返回
+                Back
             </el-button>
             <el-button type="success" class="hidePrint" @click="$print">
-                打印本页
+                Print this page
             </el-button>
         </div>
     </div>

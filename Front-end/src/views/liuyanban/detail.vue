@@ -1,47 +1,47 @@
 <template>
     
     <div class="liuyanban-detail" v-loading="loading" ref="print">
-        <el-page-header @back="goBack" content="详情页面"></el-page-header>
+        <el-page-header @back="goBack" content="Detail Page"></el-page-header>
         <div class="admin-detail">
 
                         <div class="detail detail-text">
                 <div class="detail-title">
-                    姓名：
+                    Name：
                 </div>
                 <div class="detail-content">
                     {{ map.xingming }}
                 </div>
             </div><div class="detail detail-text">
                 <div class="detail-title">
-                    联系电话：
+                    Phone Number：
                 </div>
                 <div class="detail-content">
                     {{ map.lianxidianhua }}
                 </div>
             </div>                        <div class="detail detail-textarea">
                 <div class="detail-title">
-                    留言内容：
+                    Message Content：
                 </div>
                 <div class="detail-content">
                     {{ map.liuyanneirong }}
                 </div>
             </div><div class="detail detail-textarea">
                 <div class="detail-title">
-                    回复内容：
+                    Reply Message：
                 </div>
                 <div class="detail-content">
                     {{ map.huifuneirong }}
                 </div>
             </div>                        <div class="detail detail-textuser">
                 <div class="detail-title">
-                    留言人：
+                    Message Writer：
                 </div>
                 <div class="detail-content">
                     {{ map.liuyanren }}
                 </div>
             </div>                        <div class="detail detail-autotime">
                 <div class="detail-title">
-                    添加时间：
+                    Add time：
                 </div>
                 <div class="detail-content">
                     {{ map.addtime }}
@@ -51,10 +51,10 @@
         </div>
         <div class="mt10">
             <el-button type="default" class="hidePrint" @click="$router.go(-1)">
-                返回
+                Back
             </el-button>
             <el-button type="success" class="hidePrint" @click="$print">
-                打印本页
+                Print Page
             </el-button>
         </div>
     </div>

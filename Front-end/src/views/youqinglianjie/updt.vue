@@ -2,18 +2,18 @@
     <div class="youqinglianjie-add" v-loading="loading">
         <el-card class="box-card">
             <div slot="header" class="clearfix updt">
-                                    <el-page-header @back="$router.go(-1)" content="编辑友情链接">
+                                    <el-page-header @back="$router.go(-1)" content="Edit Friendly Linnk">
                     </el-page-header>
                             </div>
             <div class="form-database-form">
                 
 
             <el-form :model="form" ref="formModel" label-width="130px" status-icon validate-on-rule-change>
-                                <el-form-item label="网站名称" prop="wangzhanmingcheng" required :rules="[{required:true, message:'请填写网站名称'}]">
-                                            <el-input placeholder="输入网站名称" style="width:250px;" v-model="form.wangzhanmingcheng" />                                    </el-form-item>
+                                <el-form-item label="Website Name" prop="wangzhanmingcheng" required :rules="[{required:true, message:'Please enter website name'}]">
+                                            <el-input placeholder="Please enter website name" style="width:250px;" v-model="form.wangzhanmingcheng" />                                    </el-form-item>
 
-                                <el-form-item label="网址" prop="wangzhi" required :rules="[{required:true, message:'请填写网址'}]">
-                                            <el-input placeholder="输入网址" style="width:250px;" v-model="form.wangzhi" />                                    </el-form-item>
+                                <el-form-item label="Web" prop="wangzhi" required :rules="[{required:true, message:'Please enter web'}]">
+                                            <el-input placeholder="Please enter web" style="width:250px;" v-model="form.wangzhi" />                                    </el-form-item>
 
                                 <el-form-item v-if="btnText">
                     <el-button type="primary" @click="submit">{{ btnText }}</el-button>
@@ -65,7 +65,7 @@
             },
             btnText:{
                 type:String,
-                default:'提交'
+                default:'Submit'
             },
                         id: {
                 type: [String, Number],
@@ -84,7 +84,7 @@
                     this.$post(api.youqinglianjie.update , form).then(res=>{
                         this.loading = false;
                         if(res.code == api.code.OK){
-                            this.$message.success('添加成功');
+                            this.$message.success('Add successfully');
                             this.$emit('success' , res.data);
                             this.$refs.formModel.resetFields();
                                                         this.loadInfo();

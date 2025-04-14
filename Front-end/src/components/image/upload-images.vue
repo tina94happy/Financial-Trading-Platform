@@ -9,7 +9,7 @@
                         <div class="el-upload-list__item-actions">
                             <span class="el-upload-list__item-preview" @click="Preview(img)"><i class="el-icon-zoom-in"></i></span>
                             <span class="el-upload-list__item-delete" @click="download(img)"><i class="el-icon-download"></i></span>
-                            <el-popconfirm title="确定删除该图片？" @confirm="deleteImage(img)" @onConfirm="deleteImage(img)">
+                            <el-popconfirm title="Do you want to  delete this picture？" @confirm="deleteImage(img)" @onConfirm="deleteImage(img)">
                             <span class="el-upload-list__item-delete" slot="reference"><i class="el-icon-delete"></i></span>
                             </el-popconfirm>
                         </div>

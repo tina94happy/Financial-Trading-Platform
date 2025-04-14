@@ -2,53 +2,53 @@
     <div class="yuding-add" v-loading="loading">
         <el-card class="box-card">
             <div slot="header" class="clearfix updt">
-                                    <el-page-header @back="$router.go(-1)" content="编辑预定">
+                                    <el-page-header @back="$router.go(-1)" content="Edit Reserved">
                     </el-page-header>
                             </div>
             <div class="form-database-form">
                 
 
             <el-form :model="form" ref="formModel" label-width="130px" status-icon validate-on-rule-change>
-                                <el-form-item v-if="isRead" label="线路编号" prop="xianlubianhao">
+                                <el-form-item v-if="isRead" label="Financial Product Number" prop="xianlubianhao">
                                             {{  form.xianlubianhao  }}                                    </el-form-item>
 
-                                <el-form-item v-if="isRead" label="线路名称" prop="xianlumingcheng">
+                                <el-form-item v-if="isRead" label="Financial Product Name" prop="xianlumingcheng">
                                             {{  form.xianlumingcheng  }}                                    </el-form-item>
 
-                                <el-form-item v-if="isRead" label="出发地" prop="chufadi">
+                                <el-form-item v-if="isRead" label="Start Time" prop="chufadi">
                                             {{  form.chufadi  }}                                    </el-form-item>
 
-                                <el-form-item v-if="isRead" label="途经地" prop="tujingdi">
+                                <el-form-item v-if="isRead" label="Estimated Profit" prop="tujingdi">
                                             {{  form.tujingdi  }}                                    </el-form-item>
 
-                                <el-form-item v-if="isRead" label="终点" prop="zhongdian">
+                                <el-form-item v-if="isRead" label="End Time" prop="zhongdian">
                                             {{  form.zhongdian  }}                                    </el-form-item>
 
-                                <el-form-item v-if="isRead" label="价格" prop="jiage" :rules="[{validator:rule.checkNumber, message:'输入一个有效数字'}]">
+                                <el-form-item v-if="isRead" label="Real-time Price" prop="jiage" :rules="[{validator:rule.checkNumber, message:'Please enter a valid number'}]">
                                             {{  form.jiage  }}                                    </el-form-item>
 
-                                <el-form-item label="订单号" prop="dingdanhao" :rules="[{required:true, message:'请填写订单号'}]">
-                                            <el-input placeholder="输入订单号" style="width:250px;" v-model="form.dingdanhao" />                                    </el-form-item>
+                                <el-form-item label="Reserved Number" prop="dingdanhao" :rules="[{required:true, message:'Please enter reserved number'}]">
+                                            <el-input placeholder="Please enter reserved number" style="width:250px;" v-model="form.dingdanhao" />                                    </el-form-item>
 
-                                <el-form-item label="预订时间" prop="yudingshijian" required :rules="[{required:true, message:'请填写预订时间'}]">
+                                <el-form-item label="reserved time" prop="yudingshijian" required :rules="[{required:true, message:'Please enter reserved time'}]">
                                             <el-date-picker
           v-model="form.yudingshijian"
           type="datetime"
           :editable="false"
           value-format="yyyy-MM-dd HH:mm:ss"
-          placeholder="选择日期">
+          placeholder="Select Time">
         </el-date-picker>                                    </el-form-item>
 
-                                <el-form-item label="预订人姓名" prop="yudingrenxingming">
+                                <el-form-item label="Reserved Name" prop="yudingrenxingming">
                                             <el-input placeholder="输入预订人姓名" style="width:250px;" v-model="form.yudingrenxingming" />                                    </el-form-item>
 
-                                <el-form-item label="联系方式" prop="lianxifangshi">
+                                <el-form-item label="Contact information" prop="lianxifangshi">
                                             <el-input placeholder="输入联系方式" style="width:250px;" v-model="form.lianxifangshi" />                                    </el-form-item>
 
-                                <el-form-item label="备注" prop="beizhu">
+                                <el-form-item label="Note" prop="beizhu">
                                             <el-input type="textarea" v-model="form.beizhu"></el-input>                                    </el-form-item>
 
-                                <el-form-item label="预订人" prop="yudingren">
+                                <el-form-item label="Reserved Name" prop="yudingren">
                                             <el-input v-model="form.yudingren" readonly style="width: 250px;"></el-input>                                    </el-form-item>
 
                                 <el-form-item v-if="btnText">
@@ -112,7 +112,7 @@ yudingren:this.$store.state.user.session.username,
             },
             btnText:{
                 type:String,
-                default:'提交'
+                default:'Submit'
             },
                         id: {
                 type: [String, Number],
@@ -131,7 +131,7 @@ yudingren:this.$store.state.user.session.username,
                     this.$post(api.yuding.update , form).then(res=>{
                         this.loading = false;
                         if(res.code == api.code.OK){
-                            this.$message.success('添加成功');
+                            this.$message.success('Add successfully');
                             this.$emit('success' , res.data);
                             this.$refs.formModel.resetFields();
                                                         this.$router.go(-1);

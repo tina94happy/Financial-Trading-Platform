@@ -2,42 +2,42 @@
     <div class="jingdianxinxi-add" v-loading="loading">
         <el-card class="box-card">
             <div slot="header" class="clearfix updt">
-                                    <el-page-header @back="$router.go(-1)" content="编辑景点信息">
+                                    <el-page-header @back="$router.go(-1)" content="Edit Recommended Stock Number">
                     </el-page-header>
                             </div>
             <div class="form-database-form">
                 
 
             <el-form :model="form" ref="formModel" label-width="130px" status-icon validate-on-rule-change>
-                                <el-form-item label="景点编号" prop="jingdianbianhao" :rules="[{required:true, message:'请填写景点编号'}]">
-                                            <el-input placeholder="输入景点编号" style="width:250px;" v-model="form.jingdianbianhao" />                                    </el-form-item>
+                                <el-form-item label="Recommended Stock number" prop="jingdianbianhao" :rules="[{required:true, message:'Please enter Recommended Stock number'}]">
+                                            <el-input placeholder="Please enter Recommended Stock number" style="width:250px;" v-model="form.jingdianbianhao" />                                    </el-form-item>
 
-                                <el-form-item label="景点名称" prop="jingdianmingcheng" required :rules="[{required:true, message:'请填写景点名称'}]">
-                                            <el-input placeholder="输入景点名称" style="width:450px;" v-model="form.jingdianmingcheng" />                                    </el-form-item>
+                                <el-form-item label="Recommended Stock Name" prop="jingdianmingcheng" required :rules="[{required:true, message:'Please enter Recommended Stock Name'}]">
+                                            <el-input placeholder="Please enter Recommended Stock Name" style="width:450px;" v-model="form.jingdianmingcheng" />                                    </el-form-item>
 
-                                <el-form-item label="所属地区" prop="suoshudiqu" required :rules="[{required:true, message:'请填写所属地区'}]">
+                                <el-form-item label="Financial Product Category" prop="suoshudiqu" required :rules="[{required:true, message:'Please select Financial Product Category'}]">
                                             <el-select v-model="form.suoshudiqu" >
 <el-option v-for="m in diquList" :value="m.id" :label="m.diqumingcheng"></el-option>
 </el-select>                                    </el-form-item>
 
-                                <el-form-item label="图片" prop="tupian" required :rules="[{required:true, message:'请填写图片'}]">
+                                <el-form-item label="Image" prop="tupian" required :rules="[{required:true, message:'Please select Image'}]">
                                             <e-upload-images v-model="form.tupian"></e-upload-images>                                    </el-form-item>
 
-                                <el-form-item label="开放时间" prop="kaifangshijian" required :rules="[{required:true, message:'请填写开放时间'}]">
-                                            <el-input placeholder="输入开放时间" style="width:450px;" v-model="form.kaifangshijian" />                                    </el-form-item>
+                                <el-form-item label="Real-time" prop="kaifangshijian" required :rules="[{required:true, message:'Please enter Real-time'}]">
+                                            <el-input placeholder="Please enter Real-time" style="width:450px;" v-model="form.kaifangshijian" />                                    </el-form-item>
 
-                                <el-form-item label="附近美食" prop="fujinmeishi">
+                                <el-form-item label="Related Market Category" prop="fujinmeishi">
                                             <el-select v-model="form.fujinmeishi"  multiple="multiple" >
 <el-option v-for="m in difangmeishiList" :value="m.mingcheng" :label="m.mingcheng"></el-option>
 </el-select>                                    </el-form-item>
 
-                                <el-form-item label="地址" prop="dizhi" required :rules="[{required:true, message:'请填写地址'}]">
-                                            <el-input placeholder="输入地址" style="width:450px;" v-model="form.dizhi" />                                    </el-form-item>
+                                <el-form-item label="Related Company" prop="dizhi" required :rules="[{required:true, message:'Please enter Related Company'}]">
+                                            <el-input placeholder="Please enter Related Company" style="width:450px;" v-model="form.dizhi" />                                    </el-form-item>
 
-                                <el-form-item label="票价" prop="piaojia" :rules="[{validator:rule.checkNumber, message:'输入一个有效数字'}]">
-                                            <el-input placeholder="输入票价" style="width:250px;" v-model="form.piaojia" />                                    </el-form-item>
+                                <el-form-item label="Real-time Price" prop="piaojia" :rules="[{validator:rule.checkNumber, message:'Please enter valid number'}]">
+                                            <el-input placeholder="Please enter Real-time Price" style="width:250px;" v-model="form.piaojia" />                                    </el-form-item>
 
-                                <el-form-item label="描述" prop="miaoshu" required :rules="[{required:true, message:'请填写描述'}]">
+                                <el-form-item label="Description" prop="miaoshu" required :rules="[{required:true, message:'Please enter description'}]">
                                             <e-editor v-model="form.miaoshu"></e-editor>                                    </el-form-item>
 
                                 <el-form-item v-if="btnText">
@@ -99,7 +99,7 @@ jingdianbianhao:rule.getID(),
             },
             btnText:{
                 type:String,
-                default:'提交'
+                default:'Submit'
             },
                         id: {
                 type: [String, Number],
@@ -118,7 +118,7 @@ jingdianbianhao:rule.getID(),
                     this.$post(api.jingdianxinxi.update , form).then(res=>{
                         this.loading = false;
                         if(res.code == api.code.OK){
-                            this.$message.success('添加成功');
+                            this.$message.success('Add successfully');
                             this.$emit('success' , res.data);
                             this.$refs.formModel.resetFields();
                                                         this.loadInfo();

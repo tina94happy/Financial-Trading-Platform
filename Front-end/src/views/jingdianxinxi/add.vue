@@ -7,7 +7,7 @@
             <div class="form-database-form">
                 
 
-            <el-form :model="form" ref="formModel" label-width="130px" status-icon validate-on-rule-change>
+            <el-form :model="form" ref="formModel" label-width="180px" status-icon validate-on-rule-change>
                                 <el-form-item label="Recommended Stock number" prop="jingdianbianhao" :rules="[{required:true, message:'Please enter recommended stock number'}]">
                                             <el-input placeholder="Please enter recommended stock number" style="width:250px;" v-model="form.jingdianbianhao" />                                    </el-form-item>
 

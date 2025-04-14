@@ -5,27 +5,27 @@
         <el-card class="box-card">
             <div slot="header" class="clearfix">
                 <span class="title">
-                预定列表
+                Reserved List
                 </span>
 
             </div>
                 <!-- 搜索 -->
         <div class="form-search">
             <el-form @submit.prevent.stop :inline="true" size="mini">
-                                <el-form-item label="线路编号">
+                                <el-form-item label="Financial Product Number">
                 
                     <el-input v-model="search.xianlubianhao"></el-input>
                     
-                </el-form-item>                <el-form-item label="线路名称">
+                </el-form-item>                <el-form-item label="Financial Product Name">
                 
                     <el-input v-model="search.xianlumingcheng"></el-input>
                     
-                </el-form-item>                <el-form-item label="途经地">
+                </el-form-item>                <el-form-item label="Start Time">
                 
                     <el-input v-model="search.tujingdi"></el-input>
                     
                 </el-form-item>                <el-form-item>
-                    <el-button type="primary" @click="searchSubmit" icon="el-icon-search">查询</el-button>
+                    <el-button type="primary" @click="searchSubmit" icon="el-icon-search">Search</el-button>
                 </el-form-item>
                             </el-form>
         </div>
@@ -36,76 +36,76 @@
             
             <el-table-column type="index" label="#"></el-table-column> <!-- 序号 -->
 
-                        <el-table-column label="线路编号"width="130">
+                        <el-table-column label="Financial Product Number"width="130">
                 <template slot-scope="{row}">
                     {{  row.xianlubianhao  }}                </template>
             </el-table-column>
-                        <el-table-column label="线路名称">
+                        <el-table-column label="Financial Product Name">
                 <template slot-scope="{row}">
                     {{  row.xianlumingcheng  }}                </template>
             </el-table-column>
-                        <el-table-column label="出发地">
+                        <el-table-column label="Start Time">
                 <template slot-scope="{row}">
                     {{  row.chufadi  }}                </template>
             </el-table-column>
-                        <el-table-column label="途经地">
+                        <el-table-column label="Estimated Profit">
                 <template slot-scope="{row}">
                     {{  row.tujingdi  }}                </template>
             </el-table-column>
-                        <el-table-column label="终点">
+                        <el-table-column label="End Time">
                 <template slot-scope="{row}">
                     {{  row.zhongdian  }}                </template>
             </el-table-column>
-                        <el-table-column label="价格"width="80">
+                        <el-table-column label="Real-time Price"width="80">
                 <template slot-scope="{row}">
                     {{  row.jiage  }}                </template>
             </el-table-column>
-                        <el-table-column label="订单号"width="130">
+                        <el-table-column label="Reserved Number"width="130">
                 <template slot-scope="{row}">
                     {{  row.dingdanhao  }}                </template>
             </el-table-column>
-                        <el-table-column label="预订时间"width="120">
+                        <el-table-column label="Reserved Time"width="120">
                 <template slot-scope="{row}">
                     {{  row.yudingshijian  }}                </template>
             </el-table-column>
-                        <el-table-column label="预订人姓名"width="130">
+                        <el-table-column label="Reserved Name"width="130">
                 <template slot-scope="{row}">
                     {{  row.yudingrenxingming  }}                </template>
             </el-table-column>
-                        <el-table-column label="联系方式"width="130">
+                        <el-table-column label="Contact Information"width="130">
                 <template slot-scope="{row}">
                     {{  row.lianxifangshi  }}                </template>
             </el-table-column>
-                        <el-table-column label="状态"width="130">
+                        <el-table-column label="Status"width="130">
                 <template slot-scope="{row}">
                     {{  row.zhuangtai  }}                </template>
             </el-table-column>
-                        <el-table-column label="备注">
+                        <el-table-column label="Note">
                 <template slot-scope="{row}">
                     {{  row.beizhu  }}                </template>
             </el-table-column>
-                        <el-table-column label="预订人"width="80">
+                        <el-table-column label="Reserved People"width="80">
                 <template slot-scope="{row}">
                     {{  row.yudingren  }}                </template>
             </el-table-column>
             
 
 
-                                        <el-table-column label="是否支付" width="120">
+                                        <el-table-column label="Whether to pay" width="120">
                     <template slot-scope="{row}">
                         {{  row.iszf  }}
                                             </template>
                 </el-table-column>
             
-            <el-table-column label="操作">
+            <el-table-column label="Operation">
                 <template slot-scope="{row}">
                     <el-button-group>
                     
-                                            <el-tooltip content="编辑" placement="top">
+                                            <el-tooltip content="Edit" placement="top">
                     <el-button icon="el-icon-edit" @click="$goto({path:'/admin/yudingupdt',query:{id:row.id } })"
                                type="warning" size="mini"></el-button>
                         </el-tooltip>
-                        <el-tooltip content="删除" placement="top">
+                        <el-tooltip content="Delete" placement="top">
                     <el-button icon="el-icon-delete" type="danger" size="mini" @click="deleteItem(row)">
 
                     </el-button>
@@ -209,7 +209,7 @@
             },
             // 删除某行方法
             deleteItem( row ){
-                this.$confirm('确定删除数据？' , '提示',{ // 弹出 确认框提示是否要删除
+                this.$confirm('Do you wanna delete the data？' , 'Hint',{ // 弹出 确认框提示是否要删除
                     type: 'warning'
                 }).then(()=>{// 确定操作
 

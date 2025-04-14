@@ -2,37 +2,37 @@
     <div class="lvyouxianlu-add" v-loading="loading">
         <el-card class="box-card">
             <div slot="header" class="clearfix">
-                                <span class="title"> 添加旅游线路</span>
+                                <span class="title"> Add Financial Product</span>
                             </div>
             <div class="form-database-form">
                 
 
             <el-form :model="form" ref="formModel" label-width="130px" status-icon validate-on-rule-change>
-                                <el-form-item label="线路编号" prop="xianlubianhao" :rules="[{required:true, message:'请填写线路编号'}]">
-                                            <el-input placeholder="输入线路编号" style="width:250px;" v-model="form.xianlubianhao" />                                    </el-form-item>
+                                <el-form-item label="Financial Product Number" prop="xianlubianhao" :rules="[{required:true, message:'Please enter Financial Product Number'}]">
+                                            <el-input placeholder="Please enter Financial Product Number" style="width:250px;" v-model="form.xianlubianhao" />                                    </el-form-item>
 
-                                <el-form-item label="线路名称" prop="xianlumingcheng" required :rules="[{required:true, message:'请填写线路名称'}]">
-                                            <el-input placeholder="输入线路名称" style="width:450px;" v-model="form.xianlumingcheng" />                                    </el-form-item>
+                                <el-form-item label="Financial Product Name" prop="xianlumingcheng" required :rules="[{required:true, message:'Please enter Financial Product Name'}]">
+                                            <el-input placeholder="Please enter Financial Product Name" style="width:450px;" v-model="form.xianlumingcheng" />                                    </el-form-item>
 
-                                <el-form-item label="图片" prop="tupian">
+                                <el-form-item label="Image" prop="tupian">
                                             <e-upload-images v-model="form.tupian"></e-upload-images>                                    </el-form-item>
 
-                                <el-form-item label="出发地" prop="chufadi">
-                                            <el-input placeholder="输入出发地" style="width:450px;" v-model="form.chufadi" />                                    </el-form-item>
+                                <el-form-item label="Start time" prop="chufadi">
+                                            <el-input placeholder="Please enter start time" style="width:450px;" v-model="form.chufadi" />                                    </el-form-item>
 
-                                <el-form-item label="途经地" prop="tujingdi">
-                                            <el-input placeholder="输入途经地" style="width:450px;" v-model="form.tujingdi" />                                    </el-form-item>
+                                <el-form-item label="Estimated Profit" prop="tujingdi">
+                                            <el-input placeholder="Please enter Estimated Profit" style="width:450px;" v-model="form.tujingdi" />                                    </el-form-item>
 
-                                <el-form-item label="终点" prop="zhongdian">
-                                            <el-input placeholder="输入终点" style="width:450px;" v-model="form.zhongdian" />                                    </el-form-item>
+                                <el-form-item label="End Time" prop="zhongdian">
+                                            <el-input placeholder="Please enter end time" style="width:450px;" v-model="form.zhongdian" />                                    </el-form-item>
 
-                                <el-form-item label="价格" prop="jiage" required :rules="[{required:true, message:'请填写价格'}, {validator:rule.checkNumber, message:'输入一个有效数字'}]">
-                                            <el-input placeholder="输入价格" style="width:250px;" v-model="form.jiage" />                                    </el-form-item>
+                                <el-form-item label="Real-time Price" prop="jiage" required :rules="[{required:true, message:'Please enter Real-time Price'}, {validator:rule.checkNumber, message:'输入一个有效数字'}]">
+                                            <el-input placeholder="Please enter Real-time Price" style="width:250px;" v-model="form.jiage" />                                    </el-form-item>
 
-                                <el-form-item label="线路特色" prop="xianlutese">
+                                <el-form-item label="Advantages" prop="xianlutese">
                                             <e-editor v-model="form.xianlutese"></e-editor>                                    </el-form-item>
 
-                                <el-form-item label="线路简介" prop="xianlujianjie">
+                                <el-form-item label="Description" prop="xianlujianjie">
                                             <e-editor v-model="form.xianlujianjie"></e-editor>                                    </el-form-item>
 
                                 <el-form-item v-if="btnText">
@@ -87,7 +87,7 @@ xianlubianhao:rule.getID(),
             },
             btnText:{
                 type:String,
-                default:'提交'
+                default:'Submit'
             },
                     },
 
@@ -102,7 +102,7 @@ xianlubianhao:rule.getID(),
                     this.$post(api.lvyouxianlu.insert , form).then(res=>{
                         this.loading = false;
                         if(res.code == api.code.OK){
-                            this.$message.success('添加成功');
+                            this.$message.success('Add successfully');
                             this.$emit('success' , res.data);
                             this.$refs.formModel.resetFields();
                                                         this.loadInfo();

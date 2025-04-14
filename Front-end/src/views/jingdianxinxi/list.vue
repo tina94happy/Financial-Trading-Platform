@@ -5,29 +5,29 @@
         <el-card class="box-card">
             <div slot="header" class="clearfix">
                 <span class="title">
-                景点信息列表
+                Recommended Stock List
                 </span>
 
             </div>
                 <!-- 搜索 -->
         <div class="form-search">
             <el-form @submit.prevent.stop :inline="true" size="mini">
-                                <el-form-item label="景点编号">
+                                <el-form-item label="Recommended Stock number">
                 
                     <el-input v-model="search.jingdianbianhao"></el-input>
                     
-                </el-form-item>                <el-form-item label="景点名称">
+                </el-form-item>                <el-form-item label="Recommended Stock Name">
                 
                     <el-input v-model="search.jingdianmingcheng"></el-input>
                     
-                </el-form-item>                <el-form-item label="所属地区">
+                </el-form-item>                <el-form-item label="Financial Product Category">
                 
-                    <el-select v-model="search.suoshudiqu" ><el-option label="请选择" value=""></el-option>
+                    <el-select v-model="search.suoshudiqu" ><el-option label="Please select" value=""></el-option>
 <el-option v-for="m in diquList" :value="m.id" :label="m.diqumingcheng"></el-option>
 </el-select>
                     
                 </el-form-item>                <el-form-item>
-                    <el-button type="primary" @click="searchSubmit" icon="el-icon-search">查询</el-button>
+                    <el-button type="primary" @click="searchSubmit" icon="el-icon-search">Search</el-button>
                 </el-form-item>
                             </el-form>
         </div>
@@ -38,39 +38,39 @@
             
             <el-table-column type="index" label="#"></el-table-column> <!-- 序号 -->
 
-                        <el-table-column label="景点编号"width="130">
+                        <el-table-column label="Recommended Stock number"width="180">
                 <template slot-scope="{row}">
                     {{  row.jingdianbianhao  }}                </template>
             </el-table-column>
-                        <el-table-column label="景点名称">
+                        <el-table-column label="Recommended Stock Name">
                 <template slot-scope="{row}">
                     {{  row.jingdianmingcheng  }}                </template>
             </el-table-column>
-                        <el-table-column label="所属地区"width="80">
+                        <el-table-column label="Financial Product Category"width="80">
                 <template slot-scope="{row}">
                      <e-select-view module="diqu" :value="row.suoshudiqu" select="id" show="diqumingcheng"></e-select-view>                </template>
             </el-table-column>
-                        <el-table-column label="图片"width="100">
+                        <el-table-column label="Image"width="100">
                 <template slot-scope="{row}">
                     <e-img :src="row.tupian" type="list" style="max-width:120px"></e-img>                </template>
             </el-table-column>
-                        <el-table-column label="开放时间">
+                        <el-table-column label="Real-time">
                 <template slot-scope="{row}">
                     {{  row.kaifangshijian  }}                </template>
             </el-table-column>
-                        <el-table-column label="附近美食">
+                        <el-table-column label="Related Market Category">
                 <template slot-scope="{row}">
                     {{  row.fujinmeishi  }}                </template>
             </el-table-column>
-                        <el-table-column label="地址">
+                        <el-table-column label="Related Company">
                 <template slot-scope="{row}">
                     {{  row.dizhi  }}                </template>
             </el-table-column>
-                        <el-table-column label="票价"width="80">
+                        <el-table-column label="Real-time Price"width="80">
                 <template slot-scope="{row}">
                     {{  row.piaojia  }}                </template>
             </el-table-column>
-                        <el-table-column label="浏览量"width="80">
+                        <el-table-column label="Page Views"width="80">
                 <template slot-scope="{row}">
                     {{  row.liulanliang  }}                </template>
             </el-table-column>
@@ -78,18 +78,18 @@
 
 
                         
-            <el-table-column label="操作">
+            <el-table-column label="Operation">
                 <template slot-scope="{row}">
                     <el-button-group>
                     
-                                            <el-tooltip content="详情" placement="top">
+                                            <el-tooltip content="Detail" placement="top">
                         <el-button @click="$goto({path:'/admin/jingdianxinxidetail',query:{id:row.id } })" icon="el-icon-info" type="info" size="mini"></el-button>
                         </el-tooltip>
-                                            <el-tooltip content="编辑" placement="top">
+                                            <el-tooltip content="Edit" placement="top">
                     <el-button icon="el-icon-edit" @click="$goto({path:'/admin/jingdianxinxiupdt',query:{id:row.id } })"
                                type="warning" size="mini"></el-button>
                         </el-tooltip>
-                        <el-tooltip content="删除" placement="top">
+                        <el-tooltip content="Delete" placement="top">
                     <el-button icon="el-icon-delete" type="danger" size="mini" @click="deleteItem(row)">
 
                     </el-button>
@@ -194,7 +194,7 @@
             },
             // 删除某行方法
             deleteItem( row ){
-                this.$confirm('确定删除数据？' , '提示',{ // 弹出 确认框提示是否要删除
+                this.$confirm('Do you sure to delete data？' , 'Hint',{ // 弹出 确认框提示是否要删除
                     type: 'warning'
                 }).then(()=>{// 确定操作
 

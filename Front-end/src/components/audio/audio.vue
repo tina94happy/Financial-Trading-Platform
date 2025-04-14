@@ -1,6 +1,6 @@
 <template>
     <span class="e-audio">
-        <a :href="formatImageSrc(src)" download target="_blank">下载</a>
+        <a :href="formatImageSrc(src)" download target="_blank">Download</a>
         <span class="mkicon" @click="playAudio" :class="{'mkicon-play':!playState,'mkicon-pause':playState}"></span>
         <span>{{currTime}}</span>
         /
