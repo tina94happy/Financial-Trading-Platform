@@ -1,21 +1,21 @@
 # For front-end visualize module:
-  admin is for administrator page
-  admins is about the back-end administrator's module
-  difangmeishi is about market category page module
-  diqu is about financial product category module
-  jingdianxinxi is about recommended stock module
-  liuyanban is about message board module 
-  login is about login module
-  lunbotu is about rotating chart module(show on the home page
-  lvyouxianlu is about Financial Product module
-  meishifenlei is about market module
-  shoucangjilu is about user's favorite
-  ticket is about user's purchase
-  xinwenfenlei, xinwenxinxi is about the news
-  yonghu is about back-end user's module
-  youqinglianjie is about external link
-  yuding is about user's order management module
-  zhifu is about purchase's method module
+  - admin is for administrator page
+  - admins is about the back-end administrator's module
+  - difangmeishi is about market category page module
+  - diqu is about financial product category module
+  - jingdianxinxi is about recommended stock module
+  - liuyanban is about message board module 
+  - login is about login module
+  - lunbotu is about rotating chart module(show on the home page
+  - lvyouxianlu is about Financial Product module
+  - meishifenlei is about market module
+  - shoucangjilu is about user's favorite
+  - ticket is about user's purchase
+  - xinwenfenlei, xinwenxinxi is about the news
+  - yonghu is about back-end user's module
+  - youqinglianjie is about external link
+  - yuding is about user's order management module
+  - zhifu is about purchase's method module
 
 
 
