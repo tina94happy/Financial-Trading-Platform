@@ -20,11 +20,11 @@
 
 
 # How to run this program:
-   First you need to import database files locally and open the database<br>
-   Second you need to change the configuration in the application.properties, make it fit your database setting<br>
-   Third you reload the maven repository in order to download related dependency(If you haven't configured your own maven local repository, You may need to do it first and set the path of maven on your coding tool<br>
-   Fourth you can run the back-end by using boostapplication<br>
-   Fifth you need to navigate to the front-end package to run front-end<br>
+   - First you need to import database files locally and open the database<br>
+   - Second you need to change the configuration in the application.properties, make it fit your database setting<br>
+   - Third you reload the maven repository in order to download related dependency(If you haven't configured your own maven local repository, You may need to do it first and set the path of maven on your coding tool<br>
+   - Fourth you can run the back-end by using boostapplication<br>
+   - Fifth you need to navigate to the front-end package to run front-end<br>
     Run command: "npm install serve" to download required dependency
     Run command: "npm run serve" to boost front-end
 
