@@ -40,7 +40,7 @@
         <div>
             <e-container>
                 <div style="margin:10px 0 0 0">
-                    <e-module-model-box title="Market">
+                    <e-module-model-box title="Cryptocurrency Portfolio">
                         <el-row :gutter="30">
                             <el-col v-for="r in difangmeishilist2" :md="6" :key="r.id" style="margin-bottom: 20px">
                                 <e-module-products
@@ -65,7 +65,7 @@
         <div>
             <e-container>
                 <div style="margin:10px 0 0 0">
-                    <e-module-model-box title="Popular Financial Product">
+                    <e-module-model-box title="ETF">
 
 
                         <el-row :gutter="20">
