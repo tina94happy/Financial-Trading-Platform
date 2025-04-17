@@ -38,6 +38,7 @@ public class CaptchaController extends BaseController {
                 do {
                     try{
                         result = DESUtil.encrypt("CaptchControllerPassword",sRand);
+
                     }catch (Exception e){
                         result = null;
                     }
