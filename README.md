@@ -1,3 +1,7 @@
+# Financial-Trading-Platform - Docker Version
+Original Code: https://github.com/sirpinaple1/Financial-Trading-Platform
+
+
 # For front-end visualize module:
   - admin is for administrator page
   - admins is about the back-end administrator's module
@@ -20,16 +24,29 @@
 
 
 # How to run this program:
-   - First you need to import database files locally and open the database<br>
-   - Second you need to change the configuration in the application.properties, make it fit your database setting<br>
-   - Third you reload the maven repository in order to download related dependency(If you haven't configured your own maven local repository, You may need to do it first and set the path of maven on your coding tool<br>
-   - Fourth you can run the back-end by using boostapplication<br>
-   - Fifth you need to navigate to the front-end package to run front-end<br>
-    Run command: "npm install serve" to download required dependency
-    Run command: "npm run serve" to boost front-end
+### 1. Prerequisites
+
+Ensure you have the following tools installed:
+
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+### 2. Clone the Repository
+
+   ```bash
+  git clone https://github.com/tina94happy/Financial-Trading-Platform.git
+  cd Financial-Trading-Platform
+  ```
+### 3. Start the Services
+
+Run the following command to build and start the frontend, backend, and database services:
+
+```bash
+docker-compose up --build
+```
 
 # What you need:
-  Make sure you have java environment, tomcat web server(usually it along with the IDEL coding platform), Mysql, and Maven environment. 
+  Make sure you have docker environment, for me, I using Mac to create this images, so any problem exists, please contact me.
 
 # What we have:
   Now this program can handle customer order, show the news, show non-real-time stock, handle user-to-administrator communication and have ability to count users' browsing data and purchasing data.<br>
