@@ -1,0 +1,48 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./Front-end
+      dockerfile: Dockerfile
+    container_name: frontend-app
+    ports:
+      - "8080:8080"    # Vue.js app served by Nginx on port 80
+    depends_on:
+      - backend    # Ensure back-end starts before front-end (optional)
+    networks:
+      - app-network
+    environment:
+      - VUE_APP_API_BASE=http://backend-app:8088
+
+  backend:
+    build:
+      context: ./Back-end
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    container_name: backend-app
+    ports:
+      - "8088:8088"
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: mysql:5.7
+    platform: linux/amd64
+    container_name: my_mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./Back-end/database/spbootvue07987lyxxtjxtsjysx.sql:/docker-entrypoint-initdb.d/init.sql
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+
